@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@theme {
+  /* 字體變數 (稍後在 HTML head 引入) */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Lato", sans-serif;
+
+  /* 動畫設定 */
+  --animate-fade-in-up: fade-in-up 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in-right: fade-in-right 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-zoom-fade-in: zoom-fade-in 2.5s ease-out forwards;
+
+  /* 關鍵影格 */
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in-right {
+    0% { opacity: 0; transform: translateX(40px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes zoom-fade-in {
+    0% { opacity: 0; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
